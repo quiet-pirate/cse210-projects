@@ -12,9 +12,8 @@ namespace Developer02{
         {
             Console.WriteLine("Date:");
             _date = Console.ReadLine();
-            Console.WriteLine($"Entry Date: {_date}");
         }
-        public string ProvidePrompt()
+        public void ProvidePrompt()
         {
             Random rnd = new Random();  
             List<string> questions = new List<string>();
@@ -25,16 +24,14 @@ namespace Developer02{
             questions.Add("If I had one thing I could do over today, what would it be?");
 
             int index = rnd.Next(0,4);
-            return questions[index];
+            Console.WriteLine(questions[index]);
 
         }
         public void EnterJournal()
         {
             Console.WriteLine("Enter your response here:");
             _response = Console.ReadLine();
-            Console.WriteLine($"{_response}");
         }
-
     }
 }
 
