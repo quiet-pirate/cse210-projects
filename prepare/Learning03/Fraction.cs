@@ -4,42 +4,49 @@ public class Fraction
 {
     private int _top;
     private int _bottom;
-}
-//
-// public class Person
-// {
-//     private string _title;
-//     private string _firstName;
-//     private string _lastName;
 
-//     public string GetInformalSignature()
-//     {
-//         return "Thanks, " + _firstName;
-//     }
+    public Fraction()
+    {
+        _top = 1;
+        _bottom = 1;
+    }
+    public Fraction(int number)
+    {
+        _top = number;
+        _bottom = 1;
+    }
+     public Fraction(int top, int bottom)
+     {
+        _top = top;
+        _bottom = bottom;
+     }
 
-//     public string GetFormalSignature()
-//     {
-//         return "Sincerely, " + GetFullName();
-//     }
+     //getters and setters
+     public int GetTop()
+     {
+        return _top;
+     }
 
-//     private string GetFullName()
-//     {
-//         return _title + " " + _firstName + " " + _lastName;
-//     }
-//     ...
-// public class Person
-// {
-
-//     public string GetTop()
-//     {
-//         return _firstName;
-//     }
-
-//     public void SetTop(int bottom)
-//     {
-//         _bottom = bottom;
-//     }
-
-//     ...
-// }
+    //  public int SetTop(int top)
+    //  {
+    //     _top = top;
+    //  }
+     public int GetBottom()
+     {
+        return _bottom;
+     }
+    //  public int SetBottom(int bottom)
+    //  {
+    //     _bottom = bottom;
+    //  }
+   
+     public string GetFractionString()
+     {
+        string fraction = ($"{_top}/{_bottom}");
+        return fraction;
+     }
+     public double GetDecimalValue()
+     {
+        return (double)_top/(double)_bottom;
+     }
 }
