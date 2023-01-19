@@ -6,23 +6,21 @@ class Program
     {
        Fraction f = new Fraction ();
        Fraction f1 = new Fraction();
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f1.GetDecimalValue());
 
-       Fraction f2 = new Fraction (_top, 1);
-        f.SetTop();
+       Fraction f2 = new Fraction (5, 1);
+        Console.WriteLine(f2.GetFractionString());
+        Console.WriteLine(f2.GetDecimalValue());
 
-       Fraction f3 = new Fraction(Fraction._top, Fraction._bottom);
+       Fraction f3 = new Fraction(3, 4);
+        Console.WriteLine(f3.GetFractionString());
+        Console.WriteLine(f3.GetDecimalValue());
 
-       //Bring public class fraction
-       //Fraction method to create fraction
-       Console.WriteLine($"{GetFractionString}");//something goes here? like a WriteLine
-        Console.WriteLine($"{GetDecimalValue}");
+        Fraction f4 = new Fraction(1, 3);
+        Console.WriteLine(f4.GetFractionString());
+        Console.WriteLine(f4.GetDecimalValue());
+  
     }
-    }
-    
-        
-    
-    GetDecimalValue()
-    {
-        //Another thing goes here like a WriteLine
-    }
+
 }

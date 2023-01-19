@@ -22,23 +22,24 @@ public class Fraction
      }
 
      //getters and setters
-     public int GetTop()
+     public int getTop()
      {
         return _top;
      }
 
-    //  public int SetTop(int top)
-    //  {
-    //     _top = top;
-    //  }
-     public int GetBottom()
+     public void setTop(int top)
+     {
+        _top = top;
+     }
+
+     public int getBottom()
      {
         return _bottom;
      }
-    //  public int SetBottom(int bottom)
-    //  {
-    //     _bottom = bottom;
-    //  }
+     public void setBottom(int bottom)
+     {
+        _bottom = bottom;
+     }
    
      public string GetFractionString()
      {
