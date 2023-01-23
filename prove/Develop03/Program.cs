@@ -12,10 +12,10 @@ class Program
 
 
         Scripture scriptureReference = new Scripture(scriptureReference, "full text");
-        Scripture scripture = new Scripture(scriptureReference,"text");
+        Scripture scripture = new Scripture(scripture,"text");
         ScriptureMemorizer scriptureMemorizer = new ScriptureMemorizer(scripture);
 
-        string userInput;
+        string userInput = "";
         while (userInput != "quit" && scriptureMemorizer.hasWordLeft() == true)
         {
             Console.Clear();
