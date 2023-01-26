@@ -5,24 +5,25 @@ namespace Developer02
 
     public class Journal
     {
-        public List<string> list = new List<string>();
-        public int _choice = 0;
+        public List<JournalEntry> list = new List<JournalEntry>();
+        // public int _choice = 0;
         //string response = "";
-        JournalEntries journalEntries = new JournalEntries();
+        // JournalEntry journalEntries = new JournalEntry();
         public void WriteEntry()
         {
+            JournalEntry journalEntries = new JournalEntry();
             Console.Write("Write here:");
             journalEntries.UserDate();
             journalEntries.ProvidePrompt();
             journalEntries.EnterJournal();
+            list.Add(journalEntries);
             
         }
         public void Display()
         {
-            string[] entries = {};
-            foreach (string entry in entries)
+            foreach (JournalEntry item in list)
             {
-            Console.WriteLine($"Date: {journalEntries._date}, {journalEntries._prompt}, {journalEntries._response}");
+            Console.WriteLine($"Date: {item._date}, {item._prompt}, {item._response}");
             Console.WriteLine();
             }
         }
@@ -43,7 +44,7 @@ namespace Developer02
             string filename = "myFile.txt";
             using(StreamWriter save = new StreamWriter(filename))
             {
-                save.Write($"Date:{journalEntries._date},\n {journalEntries._prompt},\n {journalEntries._response}");
+                save.Write($"Date:{list._date},\n {list._prompt},\n {list._response}");
             }
 
         }

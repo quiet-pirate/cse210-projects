@@ -2,7 +2,7 @@ using System;
 
 namespace Developer02{
 
-    public class JournalEntries
+    public class JournalEntry
     {
         public string _date = "";
         public string _prompt = "";

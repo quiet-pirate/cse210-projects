@@ -35,7 +35,6 @@ class ScriptureMemorizer
 
         }while(wordsRemoved != numWordsToRemove);
     
-
     public string toString() 
     {
         return string.Join(' ', scriptureTextWordList);
