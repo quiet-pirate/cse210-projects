@@ -27,6 +27,16 @@ namespace Developer02
             Console.WriteLine();
             }
         }
+         public void SaveFile()
+        {
+            string filename = "myFile.txt";
+            using(StreamWriter save = new StreamWriter(filename))
+            foreach (JournalEntry item in list)
+            {
+                save.Write($"Date:{item._date},\n {item._prompt},\n {item._response}");
+            }
+
+        }
         public void LoadFile()
         {
             //Prompt user for file name?
@@ -35,16 +45,6 @@ namespace Developer02
             using (StreamReader read = new StreamReader(filename))
             {
                 Console.WriteLine(read.ReadToEnd());
-            }
-
-        }
-
-        public void SaveFile()
-        {
-            string filename = "myFile.txt";
-            using(StreamWriter save = new StreamWriter(filename))
-            {
-                save.Write($"Date:{list._date},\n {list._prompt},\n {list._response}");
             }
 
         }

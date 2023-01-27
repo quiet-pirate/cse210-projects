@@ -2,25 +2,73 @@ using System;
 
 public class Activity
 {
+    private string _startActivity;
+    private string _description;
+    private string _endActivity;
     private int _counter;
     private int _duration;
+    private string _nameActivity;
 
-    public void Timer()
+    public Assignment(string startActivity, string description, string endActivity, int counter, int duration, string nameActivity)
     {
-        for (var i = 0; i <10; i++)
-        {
-            Turn();
-
-        }
+        _startActivity = startActivity;
+        _description = description;
+        _endActivity = endActivity;
+        _counter = counter;
+        _duration = duration;
+        _nameActivity = nameActivity;
+    }
+    public string GetActivityName()
+    {
+        return _nameActivity;
     }
 
-    public void dispayCountDown(int numSecondsToRun)
+    public string StartingMessage(string nameActivity, string description)
     {
-        for (int i = 1; i <= numSecondsToRun; i++)
+        Console.WriteLine($"This activity is the {_nameActivity}. {_description}");
+        Console.WriteLine($"How many seconds would you like to do the {_nameActivity} for?");
+        Console.Write()
+
+    }
+    public string EndingMessage()
+    {
+        //return //
+    }
+
+    public void Spinner(int numSecondsToRun)
+    {
+        //Stopwatch stopwatch = new Stopwatch();
+        //stopwatch.Start();
+        //while (stopwatch.EllapsedMillisecond / 1000 < nuwSecondsToRun)
         {
-            Console.Write(string.Format("You may begin in {0}", i));
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Thread.Sleep(1000);
+            //spinnerCounter++;
+            //switch(spinnerCounter %4 )
+            //{
+                case 0 : Console.Write("/"); break;
+                case 1 : Console.Write("-"); break;
+                case 2 : Console.Write("\\"); break;
+                case 3 : Console.Write("|"); break;
+            }
+            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            Thread.Sleep(200);
         }
+        Console.Write("");
+
+    }
+    
+
+    // public void CountDown(int numSecondsToRun)
+    // {
+    //     for (int i = 1; i <= numSecondsToRun; i++)
+    //     {
+    //         Console.Write(string.Format("You may begin in {0}", i));
+    //         Console.SetCursorPosition(0, Console.CursorTop);
+    //         Thread.Sleep(1000);
+    //     }
+    // }
+
+    public void RunActivity()
+    {
+        //
     }
 }

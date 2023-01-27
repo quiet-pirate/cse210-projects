@@ -25,6 +25,7 @@ namespace Developer02{
 
             int index = rnd.Next(0,4);
             Console.WriteLine(questions[index]);
+            _prompt = questions[index];
 
         }
         public void EnterJournal()
