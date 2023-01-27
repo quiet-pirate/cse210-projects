@@ -9,7 +9,7 @@ public class Activity
     private int _duration;
     private string _nameActivity;
 
-    public Assignment(string startActivity, string description, string endActivity, int counter, int duration, string nameActivity)
+    public Activity(string nameActivity, string startActivity, string description, string endActivity, int counter, int duration)
     {
         _startActivity = startActivity;
         _description = description;
@@ -17,7 +17,11 @@ public class Activity
         _counter = counter;
         _duration = duration;
         _nameActivity = nameActivity;
+
+        Activity a1 = new Activity("Breathing", "Start info", "Description")
     }
+
+    //public class Child: Parent
     public string GetActivityName()
     {
         return _nameActivity;
@@ -55,7 +59,6 @@ public class Activity
         Console.Write("");
 
     }
-    
 
     // public void CountDown(int numSecondsToRun)
     // {
