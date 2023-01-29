@@ -70,8 +70,4 @@ public class Activity
     //     }
     // }
 
-    public void RunActivity()
-    {
-        //
-    }
 }

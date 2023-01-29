@@ -20,11 +20,19 @@ public class Program
             if(_choice == 1)
             {
                 //activity.BreathingExercise();
-                activity.RunActivity();
+                activity.RunBreathing();
             }
             if(_choice == 2)
             {
-                activity.RunActivity();
+                activity.RunRefelcting();
+            }
+            if(_choice == 3)
+            {
+                activity.RunListing();
+            }
+            if(_choice == 4)
+            {
+                Console.WriteLine("Thanks for participating. Have a mindful day.");
             }
 
             
