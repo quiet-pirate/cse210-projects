@@ -2,27 +2,41 @@ using System.IO;
 
 public class Goals
 {
-    public string _goal = "";
+    public string _goalName = "";
     public string _goalDescription = "";
     public int _points = 0;
+    public bool _complete;
 
-    
+    public string GetName()
+    {
+        return _goalName;
+    }
+    public void SetName(string goalName)
+    {
+        _goalName = goalName;
+    }
+    public RecordEvent()
+    {
+        //
+    }   
+    public void IsComplete()
+    {
+        //foreach (bool b in new bool [] {false,true});
+        while (_complete == true)
+        {
+            Console.WriteLine($"[x] {_goalName}");
+        }
+        while (_complete == false)
+        {
+            Console.WriteLine($"[] {_goalName}");
+        }
+    }
 
-    //GetPoints()
-
-    //
-// string filename = "myFile.txt";
-// string[] lines = System.IO.File.ReadAllLines(filename);
-
-// foreach (string line in lines)
-// {
-//     string[] parts = line.Split(",");
-
-//     string firstName = parts[0];
-//     string lastName = parts[1];
-// }
-    //Save()
-    //Load()
+    public int GetPoints()
+    {
+        //adds _points
+        return 
+    }
     //ShowList()
     //AddScore()
     DisplayScore()

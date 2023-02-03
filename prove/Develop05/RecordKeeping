@@ -2,27 +2,82 @@ using System;
 public class RecordKeeping
 {
     List<string> _goalsList = new List<string>();
-    List<Goals> _newGoals = new List<Goals>();
+    List<Goals> newGoals = new List<Goals>();
     public int _totalPoints = 0;
 
-    public void CreateNewGoal()
+    public void CreateNewGoal(Goals newGoal)
     {
-
+        Console.Write("Add New Goal:");
+        newGoals.Add(newGoal);
     }
     public void Save()
     {
-
+        string filename = "";
+        using(StreamWriter save= new StreamWriter(filename))
+        foreach (Goals item in list)
+        {
+            save.Write(${goal.})
+        }
     }
     public void Load()
     {
 
     }
+    public void SaveFile()
+    {
+        if (newGoals.Count() == 0)
+        {
+            Console.WriteLine("No new goals to save.");
+            return;
+        }
+    
+        string filename = "myFile.txt";
+            using(StreamWriter save = new StreamWriter(filename))
+            foreach (JournalEntry item in list)
+            {
+                save.Write($"{item._date}|{item._prompt}|{item._response}|");
+            }
+
+    }
+    public string AskFileName()
+    {
+        Console.Write("What is the name of your file?");
+        return Directory.GetCurrentDirectory() + "\\Files\\"+ Console.ReadLine();
+    }    
+        public void LoadFile()
+        {
+            string filename = "myFile.txt";
+            string[] lines = System.IO.File.ReadAllLines(filename);
+            using (StreamReader read = new StreamReader(filename))
+            foreach(string item in lines)
+            {
+                JournalEntry fullEntry = new JournalEntry();
+                list.Add(fullEntry);
+                List <string> allInfo = item.Split("|").ToList();
+
+                fullEntry._date = allInfo[0];
+                fullEntry._prompt = allInfo[1];
+                fullEntry._response = allInfo[2];
+                
     public void DisplayGoals()
     {
-
+        if (newGoals.Count()==0)
+        {
+            Console.WriteLine("No goals available. Please create new goal.");
+        }
+        foreach(Goals goal in newGoals)
+        {
+            Console.WriteLine(goal.ToString());
+        }
     }
     public int CalculateTotalPoints()
     {
-        //Add
+        return _totalPoints;
+    }
+
+    public void DisplayScore()
+    {
+        //total
+        Console.WriteLine($"You have {CalculateTotalPoints()} points.");
     }
 }
