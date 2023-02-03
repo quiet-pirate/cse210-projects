@@ -1,0 +1,28 @@
+using System;
+public class RecordKeeping
+{
+    List<string> _goalsList = new List<string>();
+    List<Goals> _newGoals = new List<Goals>();
+    public int _totalPoints = 0;
+
+    public void CreateNewGoal()
+    {
+
+    }
+    public void Save()
+    {
+
+    }
+    public void Load()
+    {
+
+    }
+    public void DisplayGoals()
+    {
+
+    }
+    public int CalculateTotalPoints()
+    {
+        //Add
+    }
+}

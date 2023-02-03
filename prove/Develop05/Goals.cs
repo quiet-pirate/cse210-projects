@@ -1,9 +1,12 @@
 using System.IO;
 
-class Goals
+public class Goals
 {
     public string _goal = "";
+    public string _goalDescription = "";
     public int _points = 0;
+
+    
 
     //GetPoints()
 
@@ -22,4 +25,8 @@ class Goals
     //Load()
     //ShowList()
     //AddScore()
+    DisplayScore()
+    {
+        //total points
+    }
 }

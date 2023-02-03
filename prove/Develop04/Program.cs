@@ -24,7 +24,7 @@ public class Program
             }
             if(_choice == 2)
             {
-                activity.RunRefelcting();
+                activity.RunReflecting();
             }
             if(_choice == 3)
             {
