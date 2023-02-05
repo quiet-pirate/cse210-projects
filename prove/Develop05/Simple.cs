@@ -17,7 +17,7 @@ public class Simple : Goals
     public override string ToString()
     {
         return string.Format("[{0}] {1} {2}", ((_goalComplete == false)?)"":"x"),
-        getGoalName(), getGoaDescription();
+        getGoalName(), getGoalDescription();
     }
     public override void RecordEvent()
     {

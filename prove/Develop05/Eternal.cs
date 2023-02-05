@@ -13,6 +13,7 @@ public class Eternal : Goals
     public void GoalCountTotal()
     {
         //add points
+        AddPoints();
     }
 
 }
