@@ -5,13 +5,16 @@ public class Breathing : Activity
     string _inMessage = "";
     string _outMessage = "";
 
- public void RunBreathing()
+ public void RunBreathing(string inMessage, string outMessage) : base(nameActivity, description)
  {
     Console.WriteLine("Breathing Activity");
     //Display start message
+    Activity.StartingMessage("Breathing", "This activity will help you relax by walking through breathing in and out");
     //Display description "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing."
     //BreathingExercise()
  }
+
+ 
 public void BreathingExercise()
 {
     //loop until number of seconds specified

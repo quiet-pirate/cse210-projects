@@ -9,6 +9,8 @@ public class Activity
     private int _duration;
     private string _nameActivity;
 
+    private int _numSectoRun;
+
     public Activity(string nameActivity, string startActivity, string description, string endActivity, int counter, int duration)
     {
         _startActivity = startActivity;
@@ -27,7 +29,7 @@ public class Activity
         return _nameActivity;
     }
 
-    public string StartingMessage(string nameActivity, string description)
+    public string StartingMessage(string nameActivity, string description): base()
     {
         Console.WriteLine($"This activity is the {_nameActivity}. {_description}");
         Console.WriteLine($"How many seconds would you like to do the {_nameActivity} for?");
@@ -39,26 +41,26 @@ public class Activity
         //return //
     }
 
-    // public void Spinner(int numSecondsToRun)
-    // {
-    //     Stopwatch stopwatch = new Stopwatch();
-    //     stopwatch.Start();
-    //     while (stopwatch.EllapsedMillisecond / 1000 < nuwSecondsToRun)
-    //     {
-    //         spinnerCounter++;
-    //         switch(spinnerCounter %4 )
-    //         {
-    //             case 0 : Console.Write("/"); break;
-    //             case 1 : Console.Write("-"); break;
-    //             case 2 : Console.Write("\\"); break;
-    //             case 3 : Console.Write("|"); break;
-    //         }
-    //         Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-    //         Thread.Sleep(200);
-    //     }
-    //     Console.Write("");
+    public void Spinner(int numSecondsToRun)
+    {
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        while (stopwatch.EllapsedMillisecond / 1000 < numSecondsToRun)
+        {
+            spinnerCounter++;
+            switch(spinnerCounter %4 )
+            {
+                case 0 : Console.Write("/"); break;
+                case 1 : Console.Write("-"); break;
+                case 2 : Console.Write("\\"); break;
+                case 3 : Console.Write("|"); break;
+            }
+            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            Thread.Sleep(200);
+        }
+        Console.Write("");
 
-    // }
+    }
 
     public void CountDown(int numSecondsToRun)
     {

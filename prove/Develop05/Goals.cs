@@ -8,7 +8,7 @@ public class Goals
     public int _totalPoints = 0;
     public bool _complete;
 
-    public Goals())
+    public Goals()
     {
         
     }
@@ -39,13 +39,13 @@ public class Goals
 
     public int AddPoints()
     {
+        while (_complete == true);
         //adds _points
-        return 
+        return _totalPoints + _points;
     }
-    //ShowList()
-    //AddScore()
+    
     public int DisplayScore()
     {
-        Console.WriteLine({_totalPoints});
+        Console.WriteLine({AddPoints()});
     }
 }
