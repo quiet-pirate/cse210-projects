@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation3 World!");
+        Console.WriteLine("Standard details");
+        Console.WriteLine("Full details");
+        Console.WriteLine("Short description");
     }
 }

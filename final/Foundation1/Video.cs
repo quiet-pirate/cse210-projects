@@ -23,7 +23,7 @@ public class Video
         }
     }
 
-    public void Display()
+    public void DisplayInfo()
     {
         Console.WriteLine($"Title: {_title}, Author: {_author}, Lenght in seconds : {_lenght}");
     }

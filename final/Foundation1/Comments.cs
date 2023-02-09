@@ -6,7 +6,7 @@ public class Comments
     
     
     //comments.Add"
-    public void Comment()
+    public void DisplayComment()
     {
         Console.WriteLine($"Commenter: {_commentAuthor}");
         Console.WriteLine($"Comment:{_comment}");
