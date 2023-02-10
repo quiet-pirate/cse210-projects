@@ -8,9 +8,9 @@ class Program
        //the title, author, lenght, number of comments, and list
        //out the comments for that video
        Video v1 = new Video();
-       v1._title = "Time lapse puzzle";
-       v1._author = "Karen puzzles";
-       v1._lenght = 425;
+       v1._title = "HOW TO DO A JIGSAW PUZZLE QUICKLY";
+       v1._author = "Karen Puzzles";
+       v1._lenght = 1792;
 
        Video v2 = new Video();
        v2._title = "One two three";

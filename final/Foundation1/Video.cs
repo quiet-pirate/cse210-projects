@@ -12,7 +12,7 @@ public class Video
     public void Comments()
     {
         Comments entries = new Comments();
-        entries.Comment();
+        entries.DisplayComment();
         comments.Add(entries);
     }
     public void NumberOfComments()
