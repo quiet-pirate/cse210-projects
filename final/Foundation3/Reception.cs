@@ -1,5 +1,10 @@
 using System;
 public class Reception
 {
-    public bool _reservation;
+    public string _reservationEmail = "";
+
+    public void ReservationDone()
+    {
+        //
+    }
 }

@@ -5,9 +5,9 @@ public class Order
     public List<string> products;
     public int _shipping = 0;
 
-    public double TotalCost()
+    public double TotalCost(int quantity, double price)
     {
-        return +_shipping;
+        return Product.CalculatePrice()+_shipping;
     }
 
 }

@@ -1,7 +1,7 @@
 using System;
 public class Customer
 {
-    public string _customerName = "";
+    private string _customerName = "";
 
     public class Address
     {

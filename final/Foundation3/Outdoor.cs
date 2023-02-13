@@ -1,5 +1,10 @@
 using System;
 public class Outdoor
 {
-    public string _forecast = "";
+    public string _weatherForecast = "";
+
+    public void Forecaster()
+    {
+        //
+    }
 }
