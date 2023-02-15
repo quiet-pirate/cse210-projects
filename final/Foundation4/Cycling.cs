@@ -2,9 +2,9 @@ using System;
 class Cycling: Activity
 {
     private double _speed = 0;
-    public Cycling()
+    public Cycling(double speed)
     {
-
+        _speed = speed;
     }
 
     public override double GetDistance()

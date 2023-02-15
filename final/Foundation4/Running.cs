@@ -3,7 +3,7 @@ class Running : Activity
 {
     private double _distance = 0;
 
-    public Running (string date, double lengthActivity, double distance)
+    public Running (double distance): base(date, lengthActivity)
     {
         _distance = distance;
     }

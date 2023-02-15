@@ -1,9 +1,13 @@
 using System;
-public class Lecture
+public class Lecture : Event
 {
-    public string _speaker = "";
-    public int _limitedCapacity = 0;
+    private string _speaker = "";
+    private int _limitedCapacity = 0;
 
+    public Lecture (string speaker, string limitedCapacity) : base(eventTitle)
+    {
+
+    }
     public void GetSpeaker(string speaker)
     {
         _speaker = speaker;
