@@ -2,11 +2,12 @@ using System;
 abstract class Activity
 {
     private string _date;
-    private double _lenghtActivity;
+    private double _lengthActivity;
 
-    public Activity()
+    public Activity(string date, double lengthActivity)
     {
-
+        _date = date;
+        _lengthActivity = lengthActivity;
     }
     public abstract double GetDistance();
 

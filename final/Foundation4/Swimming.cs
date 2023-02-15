@@ -9,11 +9,11 @@ class Swimming: Activity
     }
     public override double GetDistance()
     {
-        return 0;//override
+        return _laps * 50 /1000 * 0.62;
     }
     public override double GetSpeed()
     {
-        return 0 ;//override
+        return 0 ;
     }
     public override double GetPace()
     {
@@ -21,6 +21,6 @@ class Swimming: Activity
     }
     public override void GetSummary()
     {
-        Console.WriteLine("The Summary");
+        Console.WriteLine($"{date}");
     }
 }
