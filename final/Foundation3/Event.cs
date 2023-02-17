@@ -6,14 +6,16 @@ public class Event
     protected string _date;
     protected string _time;
     protected string _address;
+    protected string _eventType;
 
-    public Event(string eventTitle, string description, string date, string time, string address)
+    public Event(string eventTitle, string description, string date, string time, string address, string eventType)
     {
         _eventTitle = eventTitle;
         _description = description;
         _date = date;
         _time = time;
         _address = address;
+        _eventType = eventType;
     }
     public string GetTitle()
     {
@@ -31,6 +33,10 @@ public class Event
     {
         return _time;
     }
+    public new string GetType()
+    {
+        return _eventType;
+    }
     public void Standard()
     {
         Console.WriteLine($"{GetTitle()}, {GetDescription()}, Date: {_date}, Time: {_time}, Address: {_address}");
@@ -38,10 +44,11 @@ public class Event
 
     public void FullDetails()
     {
-        Console.WriteLine($"{GetTitle()}, {GetDescription()}, Date:{_date}, Time: {_time}, Address{_address}");
+        Console.WriteLine($"{GetTitle()}, {GetDescription()}, Date:{_date}, Time: {_time}, Address:{_address}");
+        Console.WriteLine($"{GetType()}");
     }
     public void ShortDescription()
     {
-        Console.WriteLine("Short Description");
+        Console.WriteLine($"{GetType()}, {GetTitle()}, {GetDate()}");
     }
 }
