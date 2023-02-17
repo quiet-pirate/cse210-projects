@@ -2,13 +2,15 @@ using System;
 public class Outdoor : Event
 {
     public string _weatherForecast = "";
-    public Outdoor()
+    public Outdoor(string eventTitle, string description, string date, string time, string address, string weatherForecast): base(eventTitle, date, description, time, address)
     {
-        return 0;
+        _weatherForecast = weatherForecast;
+        eventTitle = "Outdoor";
+        description = "Family friendly event, dependent on weather";
     }
 
     public void Forecaster()
     {
-        //
+        Console.WriteLine($"{_weatherForecast}");
     }
 }

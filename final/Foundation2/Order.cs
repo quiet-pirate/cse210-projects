@@ -7,7 +7,15 @@ public class Order
 
     public double TotalCost(int quantity, double price)
     {
-        return Product.CalculatePrice()+_shipping;
+        //return Product.CalculatePrice()+_shipping;
+    }
+    public string PackingLabel()
+    {
+        Console.WriteLine("Packing Label");
+    }
+    public string ShippingLabel()
+    {
+        Console.WriteLine("")
     }
 
 }

@@ -1,11 +1,11 @@
 using System;
 public class Event
 {
-    private string _eventTitle = "";
-    private string _description = "";
-    private string _date;
-    private string _time;
-    private string _address;
+    protected string _eventTitle = "";
+    protected string _description = "";
+    protected string _date;
+    protected string _time;
+    protected string _address;
 
     public Event(string eventTitle, string description, string date, string time, string address)
     {
@@ -23,13 +23,13 @@ public class Event
     {
         return _description;
     }
-    public void GetDate()
+    public string GetDate()
     {
-        Console.WriteLine(DateTime.Now);
+        return _date;
     }
-    public void GetTime()
+    public string GetTime()
     {
-        Console.WriteLine(DateTime.Now.TimeOfDay);
+        return _time;
     }
     public void Standard()
     {
@@ -38,7 +38,7 @@ public class Event
 
     public void FullDetails()
     {
-        Console.WriteLine("Full Details");
+        Console.WriteLine($"{GetTitle()}, {GetDescription()}, Date:{_date}, Time: {_time}, Address{_address}");
     }
     public void ShortDescription()
     {

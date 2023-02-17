@@ -15,6 +15,19 @@ class Program
        v1.NumberOfComments();
        v1.Comments();
 
+       Comments c1v1 = new Comments();
+       c1v1._comment = "I use paper plates to sort colors";
+       c1v1._commentAuthor = "MeSoCal01";
+       Comments c2v1 = new Comments();
+       c2v1._comment="My daughter likes to help with the last piece";
+       c2v1._commentAuthor="KittyMom";
+       Comments c3v1 = new Comments();
+       c3v1._comment = "I love those colors of the cranes";
+       c3v1._commentAuthor = "JigSaw Cray";
+
+       v1.comments.Add(c1v1);
+       v1.comments.Add(c2v1);
+       v1.comments.Add(c3v1);
 
        Video v2 = new Video();
        v2._title = "One two three";
@@ -31,7 +44,7 @@ class Program
        v3.DisplayInfo();
        v3.NumberOfComments();
        v3.Comments();
-        
+    
 
     }
 }

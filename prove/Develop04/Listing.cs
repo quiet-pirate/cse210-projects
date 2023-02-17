@@ -2,8 +2,8 @@ using System;
 
 public class Listing : Activity
 {
-    public string _listingPrompt = "";
-    public string _responsePrompt = "";
+    private List<string>_listingPrompt = ;
+    private List<string> _responsePrompt = "";
 
     public void RunListing()
     {

@@ -1,13 +1,23 @@
 using System;
 abstract class Activity
 {
-    private string _date;
-    private double _lengthActivity;
+    protected string _date;
+    protected double _lengthActivity;
+
 
     public Activity(string date, double lengthActivity)
     {
         _date = date;
         _lengthActivity = lengthActivity;
+    }
+
+    public string GetDate()
+    {
+        return _date;
+    }
+    public void SetDate(string date)
+    {
+        _date = date;
     }
     public abstract double GetDistance();
 

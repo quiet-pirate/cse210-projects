@@ -3,9 +3,11 @@ public class Reception : Event
 {
     public string _reservationEmail = "";
 
-    public Reception() : base()
+    public Reception(string eventTitle, string description,string date, string time, string address, string reservationEmail) : base(eventTitle, description, date, time, address)
     {
-        return "";
+        _reservationEmail = reservationEmail;
+        eventTitle = "Reception";
+        description = "Private event that includes food";
     }
 
     public void ReservationDone()

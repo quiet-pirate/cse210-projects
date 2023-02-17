@@ -2,25 +2,26 @@ using System;
 class Cycling: Activity
 {
     private double _speed = 0;
-    public Cycling(double speed)
+    private double _distance = 0;
+    public Cycling (string date, double _distance, double lengthActivity, double speed) : base (date, lengthActivity)
     {
         _speed = speed;
     }
 
     public override double GetDistance()
     {
-        return 0 ;//override
+        return _distance;
     }
     public override double GetSpeed()
     {
-        return 0 ;//override
+        return (_distance/_lengthActivity)*60 ;
     }
     public override double GetPace()
     {
-        return 0 ;//override
+        return (_lengthActivity/_distance) ;
     }
     public override void GetSummary()
     {
-        Console.WriteLine("The Summary");
+        Console.WriteLine($"{_date}-Cycling,-{_lengthActivity} minutes-{GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile");
     }
 }

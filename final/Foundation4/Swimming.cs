@@ -3,9 +3,9 @@ class Swimming: Activity
 {
     private int _laps = 0;
 
-    public Swimming()
+    public Swimming(string date, double lenghtActivity, int laps) : base (date, lenghtActivity)
     {
-
+        _laps = laps;
     }
     public override double GetDistance()
     {
@@ -13,14 +13,14 @@ class Swimming: Activity
     }
     public override double GetSpeed()
     {
-        return 0 ;
+        return (GetDistance()/_lengthActivity)*60 ;
     }
     public override double GetPace()
     {
-        return 0 ;//override
+        return (_lengthActivity/GetDistance());
     }
     public override void GetSummary()
     {
-        Console.WriteLine($"{date}");
+        Console.WriteLine($"{_date}-Swimming,-{_lengthActivity} minutes-{GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile");
     }
 }
