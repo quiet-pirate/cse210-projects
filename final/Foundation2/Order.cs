@@ -5,17 +5,21 @@ public class Order
     public List<string> products;
     public int _shipping = 0;
 
-    public double TotalCost(int quantity, double price)
+    public double TotalCost(int quantity, double price, bool us)
     {
-        //return Product.CalculatePrice()+_shipping;
+        return (quantity*price)+_shipping;
+        // if(us==true)
+        // {
+        //     return (quantity*price)+5;
+        // }
     }
-    public string PackingLabel()
+    public void PackingLabel(string name, int productId)
     {
-        Console.WriteLine("Packing Label");
+        Console.WriteLine($"{name}- ({productId})");
     }
-    public string ShippingLabel()
+    public void ShippingLabel(string city)
     {
-        Console.WriteLine("")
+        Console.WriteLine($"{city}");
     }
 
 }

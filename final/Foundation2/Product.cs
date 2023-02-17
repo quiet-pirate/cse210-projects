@@ -6,6 +6,22 @@ class Product
     private int _productId = 0;
     private string _name = "";
 
+    public Product(string name, string productId)
+    {
+
+    }
+    public string GetName()
+    {
+        return _name;
+    }
+    public void SetName(string name)
+    {
+        _name = name;
+    }
+    public int GetId()
+    {
+        return _productId;
+    }
     public double CalculatePrice()
     {
         return _quantity*_price;

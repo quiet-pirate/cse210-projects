@@ -3,10 +3,10 @@ public class Customer
 {
     private string _customerName = "";
 
-    // public Address DisplayAddress()
-    // {
-
-    // }
+    public string GetName()
+    {
+        return _customerName;
+    }
     public class Address
     {
         private string _street = "";
