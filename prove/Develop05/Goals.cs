@@ -1,14 +1,14 @@
 using System.IO;
 
-public class Goals
+public abstract class Goals
 {
-    public string _goalName = "";
-    public string _goalDescription = "";
-    public int _points = 0;
+    private string _goalName = "";
+    private string _goalDescription = "";
+    private int _points = 0;
     public int _totalPoints = 0;
     public bool _complete;
 
-    public Goals()
+    public Goals(string goalName, string goalDescription)
     {
         
     }
@@ -20,10 +20,7 @@ public class Goals
     {
         _goalName = goalName;
     }
-    public abstract RecordEvent()
-    {
-        //
-    }   
+    public abstract string RecordEvent();  
     public void IsComplete()
     {
         //foreach (bool b in new bool [] {false,true});
@@ -44,8 +41,10 @@ public class Goals
         return _totalPoints + _points;
     }
     
-    public int DisplayScore()
+    public void DisplayScore()
     {
-        Console.WriteLine({AddPoints()});
+        Console.WriteLine(AddPoints());
     }
+
+    public abstract string ToString();
 }

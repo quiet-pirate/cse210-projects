@@ -5,7 +5,7 @@ public class Eternal : Goals
     //never end
     //keep adding loop i+1
     private int _goalCount = 0;
-    public Eternal (int goalCount) :base (goalCount)
+    public Eternal (string goalName, string goalDescription, int goalCount) :base (goalName, goalDescription)
     {
         _goalCount = goalCount;
     }
@@ -16,8 +16,16 @@ public class Eternal : Goals
     }
     public void GoalCountTotal()
     {
-        //add points
         AddPoints();
+    }
+    
+    public override string RecordEvent()
+    {
+        return "something";
+    }
+    public override string ToString()
+    {
+        return "nothing";
     }
 
 }

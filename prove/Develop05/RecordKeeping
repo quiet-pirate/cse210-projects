@@ -47,7 +47,7 @@ public class RecordKeeping
         saveGoals.Add(_totalPoints.ToString());
         foreach (Goals goal in newGoals)
         {
-            saveGoals.Add(goal.ToCSVRecord());
+            //saveGoals.Add(goal.ToCSVRecord());
         }
         //SaveLoadCSV.SaveToCSV(saveGoals, filename);
         Console.WriteLine("Goals saved.");
@@ -60,33 +60,33 @@ public class RecordKeeping
         using (StreamReader read = new StreamReader(filename))
         foreach(string item in lines)
         {
-            JournalEntry fullEntry = new JournalEntry();
-            list.Add(fullEntry);
+            //JournalEntry fullEntry = new JournalEntry();
+            //list.Add(fullEntry);
             List <string> allInfo = item.Split("|").ToList();
 
-            fullEntry._date = allInfo[0];
-            fullEntry._prompt = allInfo[1];
-            fullEntry._response = allInfo[2];
-                
+            //fullEntry._date = allInfo[0];
+            //fullEntry._prompt = allInfo[1];
+            //fullEntry._response = allInfo[2];
+        } 
+    }          
     public void DisplayGoals()
     {
-        if (newGoals.Count()==0)
+       if (newGoals.Count()==0)
         {
             Console.WriteLine("No goals available. Please create new goal.");
         }
         foreach(Goals goal in newGoals)
         {
-            Console.WriteLine(goal.ToString());
+           Console.WriteLine(goal.ToString());
         }
     }
     public int CalculateTotalPoints()
     {
-        return _totalPoints;
+       return _totalPoints;
     }
 
     public void DisplayScore()
     {
-        //total
         Console.WriteLine($"You have {CalculateTotalPoints()} points.");
     }
 }
